@@ -2,7 +2,6 @@
 	height: 80px
 
 //Logo Style
-
 .logo 
 	margin-left: 100px
 	position: relative
@@ -90,14 +89,15 @@
 			transform: rotate(-45deg)
 			transition: 0.5s
 	.mobile-header
-		display: block
-		position: fixed
+		display: hidden
+		position: absolute
 		z-index: 2
 		background-color: white
 		width: 200px
 		right: -200px
 		transition: 0.5s
 		&.is-open
+			display: block
 			right: 0px
 		a
 			display: block
