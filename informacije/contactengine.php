@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "jovansavic012@gmail.com";
-$EmailTo = "johnwebofficial@gmail.com";
+$EmailTo = "jovansaviic@gmail.com";
 $Subject = "Nice & Simple Contact Form by CSS-Tricks";
 $Name = Trim(stripslashes($_POST['name'])); 
 $Second_Name = Trim(stripslashes($_POST['second_name'])); 
@@ -39,9 +39,13 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
+	<script>
+		$( '#form-status').load( 'contactthanks.php' );
+	</script>
 }
 else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
+	<script>
+		$( '#form-status').load( 'contactthanks.php' );
+	</script>
 }
 ?>
