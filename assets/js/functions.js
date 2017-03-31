@@ -62,6 +62,8 @@ function activePage() {
         var href = $(this).attr('href');
         if ('..' + path == (href +'/')) {
             $(this).addClass('active');
+        }else if(path == '/'){
+        	$('.menu-items a:first-child').addClass('active');
         }
     });
 }

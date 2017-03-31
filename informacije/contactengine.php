@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "jovansavic012@gmail.com";
-$EmailTo = "jovansaviic@gmail.com";
+$EmailTo = "johnwebofficial@gmail.com";
 $Subject = "Nice & Simple Contact Form by CSS-Tricks";
 $Name = Trim(stripslashes($_POST['name'])); 
 $Second_Name = Trim(stripslashes($_POST['second_name'])); 
@@ -12,7 +12,7 @@ $Message = Trim(stripslashes($_POST['message']));
 // validation
 $validationOK=true;
 if (!$validationOK) {
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
   exit;
 }
 
@@ -39,13 +39,9 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-	<script>
-		$( '#form-status').load( 'contactthanks.php' );
-	</script>
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.html\">";
 }
 else{
-	<script>
-		$( '#form-status').load( 'contactthanks.php' );
-	</script>
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
 }
 ?>
