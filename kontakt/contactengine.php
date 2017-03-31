@@ -27,6 +27,7 @@ $Body .= $Second_Name;
 $Body .= "\n";
 $Body .= "Broj telefona: ";
 $Body .= $Tel;
+$Body .= "\n";
 $Body .= "Email: ";
 $Body .= $Email;
 $Body .= "\n";
