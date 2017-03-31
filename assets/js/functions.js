@@ -3,9 +3,12 @@ $( document ).ready(function() {
 clientStuff();
 mobileMenu();
 activePage();
+nextInterval;
 });
 
 function clientStuff(){
+
+
 
 
 
@@ -27,7 +30,7 @@ function clientStuff(){
 			position		= $('.testimonial-wrap').children().index(curActiveClient),
 			clientNum 		= $('.testimonial-unit').length;
 
-
+			clearInterval(nextInterval);
 			if($this.hasClass('next')){
 				if(position < clientNum -1){
 					$('.active-unit').removeClass('active-unit').next().addClass('active-unit');
@@ -43,6 +46,20 @@ function clientStuff(){
 			}
 	});
 }
+
+var nextInterval = setInterval( function(){
+
+		var $this 			= $(this),
+				curActiveClient = $('.testimonial-wrap').find('.active-unit'),
+				position		= $('.testimonial-wrap').children().index(curActiveClient),
+				clientNum 		= $('.testimonial-unit').length;
+		if(position < clientNum -1){
+						$('.active-unit').removeClass('active-unit').next().addClass('active-unit');
+					}else{
+						$('.testimonial-unit').removeClass('active-unit').first().addClass('active-unit');
+					}
+		}, 7000);
+
 
 function mobileMenu(){
   $(".mobile-nav-toggle").on('click', function(){

@@ -1,15 +1,26 @@
 .price-for-company
-	margin: 40px 100px
+	position: relative
+	overflow: hidden
+	background-color: rgba(0, 0, 0, 0.6)
+	h2.subtitle
+		margin-top: 20px
+		text-align: center
+		color: $text-white
+	img
+		position: absolute
+		z-index: -1
+		width: 100%
+		height: auto
+		opacity: 0.4
+
 .package-wrap
+	z-index: 2
+	max-width: 1000px
 	display: flex
 	justify-content: space-between
+	margin: auto
 	margin-top: 20px
 .package-container
-	//background-color: $l-green
-	//border-top-left-radius: 10px
-	//border-top-right-radius: 10px
-	//border-bottom-left-radius: 10px
-	//border-bottom-right-radius: 10px
 	border: 1px solid $d-green
 	width: 300px
 	.package-headline
@@ -23,7 +34,7 @@
 	p 
 		margin: 10px
 		font-size: 18px
-		color: $text-black
+		color: $text-white
 .price-package-explanation
 	width: 50%
 	text-align: center
@@ -32,7 +43,8 @@
 
 @media (max-width: 775px)
 	.price-for-company
-		margin: 40px auto
+		img
+			display: none
 		h2.subtitle
 			font-size: 21px
 			width: 300px

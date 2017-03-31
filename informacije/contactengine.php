@@ -1,8 +1,8 @@
 <?php
 
-$EmailFrom = "jovansavic012@gmail.com";
-$EmailTo = "johnwebofficial@gmail.com";
-$Subject = "Nice & Simple Contact Form by CSS-Tricks";
+$EmailFrom = "jovan.savic@novis.rs";
+$EmailTo = "jovansaviic@gmail.com";
+$Subject = "Novis Poruka | Informacije ";
 $Name = Trim(stripslashes($_POST['name'])); 
 $Second_Name = Trim(stripslashes($_POST['second_name'])); 
 $Tel = Trim(stripslashes($_POST['phone_number'])); 
@@ -18,19 +18,19 @@ if (!$validationOK) {
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Ime: ";
 $Body .= $Name;
 $Body .= "\n";
-$Body .= "Second Name: ";
+$Body .= "Prezime: ";
 $Body .= $Second_Name;
 $Body .= "\n";
-$Body .= "Tel: ";
+$Body .= "Broj telefona: ";
 $Body .= $Tel;
 $Body .= "\n";
-$Body .= "City: ";
+$Body .= "Grad: ";
 $Body .= $City;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Poruka: ";
 $Body .= $Message;
 $Body .= "\n";
 
